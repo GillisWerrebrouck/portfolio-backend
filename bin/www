@@ -8,7 +8,6 @@ var app = require('../app');
 var debug = require('debug')('portfolio-backend:server');
 var https = require('https');
 var fs = require('fs');
-var config = require('../config');
 
 /**
  * Get port from environment and store in Express.
@@ -24,7 +23,6 @@ app.set('port', port);
 var sslOptions = {
   key: fs.readFileSync('./ssl/server.key'),
   cert: fs.readFileSync('./ssl/ssl-bundle.crt'),
-  passphrase: config.ssl.passphrase,
 };
 
 var server = https.createServer(sslOptions, app);

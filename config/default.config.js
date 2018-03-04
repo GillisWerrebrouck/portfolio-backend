@@ -11,7 +11,4 @@ module.exports = {
     database: 'PortfolioDB',
     authSource: 'user',
   },
-  ssl: {
-    passphrase: process.env.PORTFOLIO_SSL_PASSPHRASE,
-  }
 };
