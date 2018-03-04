@@ -1,0 +1,4 @@
+# find . \! -path "./node_modules/*" \! -path "./.git/*" \! -path "./.idea/*" -name "*.js" -type f -follow -print > .eslintignore
+
+/coverage/
+bin/www
